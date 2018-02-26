@@ -9,7 +9,11 @@ function beans_child_enqueue_assets() {
 
 wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css' );
 
-wp_enqueue_style( 'uikit-3', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css' ); }
+wp_enqueue_style( 'uikit-3', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css' );
+wp_enqueue_script ( 'uikit-js',  '//getuikit.com/assets/uikit/dist/js/uikit.js?nc=5894', array(), '1', true  );
+	wp_enqueue_style ( 'rock-salt',  '//fonts.googleapis.com/css?family=Rock+Salt', array(), '1'  );
+	wp_enqueue_script ( 'uikit-icon',  get_stylesheet_directory_uri() . '/js/uikit-icons.min.js', array(), '1'  );
+}
 
 // add footer
 wp_nav_menu( array( 

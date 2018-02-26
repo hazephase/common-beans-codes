@@ -6,5 +6,5 @@
 /**
  * Enqueue UIkit assets.
  */
-
+remove_all_actions( 'beans_post_body' );
 beans_load_document();

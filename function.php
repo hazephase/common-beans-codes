@@ -24,3 +24,5 @@ wp_nav_menu( array(
     'theme_location' => 'footer-menu',
     'beans_type' => 'navbar'
 ) ); 
+// Remove the breadcrumb.
+add_filter( 'beans_pre_load_fragment_breadcrumb', '__return_true' );

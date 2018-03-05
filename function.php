@@ -12,18 +12,19 @@ wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css' )
 wp_enqueue_style( 'uikit-3', '//cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.35/css/uikit.min.css' );
 wp_enqueue_script ( 'uikit-js',  '//getuikit.com/assets/uikit/dist/js/uikit.js?nc=5894', array(), '1', true  );
 	wp_enqueue_style ( 'rock-salt',  '//fonts.googleapis.com/css?family=Rock+Salt', array(), '1'  );
-	wp_enqueue_script ( 'uikit-icon',  get_stylesheet_directory_uri() . '/js/uikit-icons.min.js', array(), '1'  );
+	wp_enqueue_script('uikit-3-js', 'getuikit.com/assets/uikit/dist/js/uikit.js?nc=5894', array(), 'version', true ); // placed before body close tag
+	wp_enqueue_script('uikit-3-icon-js', get_stylesheet_directory_uri().'/js/uikit-icons.min.js', array(), 'version', true ); // placed before body close tag
 }
 
 // add footer
-wp_nav_menu( array( 
+wp_nav_menu( array(
     'menu' => 'Footer Menu',
     'menu_class' => 'uk-subnav uk-subnav-line',
     'container' => 'div',
     'container_class' => 'uk-align-medium-right', // Or custom tm-align-large-right class.
     'theme_location' => 'footer-menu',
     'beans_type' => 'navbar'
-) ); 
+) );
 // Remove the breadcrumb.
 add_filter( 'beans_pre_load_fragment_breadcrumb', '__return_true' );
 

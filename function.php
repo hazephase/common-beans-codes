@@ -26,3 +26,9 @@ wp_nav_menu( array(
 ) ); 
 // Remove the breadcrumb.
 add_filter( 'beans_pre_load_fragment_breadcrumb', '__return_true' );
+
+//declare support to woocommerce
+function mytheme_add_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );

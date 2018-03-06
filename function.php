@@ -33,3 +33,7 @@ function mytheme_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+//fixes the drop down for the main menu
+beans_remove_attribute('beans_sub_menu_wrap[_navbar][_primary]', 'class', 'uk-dropdown-navbar');
+beans_add_attribute('beans_sub_menu_wrap[_navbar][_primary]', 'class', 'uk-navbar-dropdown');

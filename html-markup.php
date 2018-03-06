@@ -10,3 +10,5 @@ beans html markup
     	echo '<!-- some content -->';
 
     beans_close_markup_e( 'markup_id', 'html_tag' );
+
+beans_add_attribute( '', '', '' );
